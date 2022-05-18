@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+
+node "GamerFace" {
+  [Domain]
+  frame "Interface" {
+    [Repo Interface]
+  }
+
+  frame "Interface" {
+    [Infra Interface]
+  }
+}
+
+frame "Implementation" {
+  [Infra Adapter]
+}
+
+frame "Implementation" {
+  [Repo Adapter]
+}
+
+database "Mongo" {
+  folder "Data Source" {
+    [Data]
+  }
+
+}
+
+[Domain] --> [Repo Interface]
+[Domain] --> [Infra Interface]
+[Infra Interface] --> [Infra Adapter]
+[Infra Adapter] --> [Redis]
+[Repo Interface] --> [Repo Adapter]
+[Repo Adapter] --> [Data]
+
+@enduml

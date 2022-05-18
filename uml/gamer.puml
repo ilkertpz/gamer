@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package com.ddd.gamer.model {
+
+    class Gamer <<Entity>> {
+        + String: id
+        + String : firstName
+        + String : gamerId
+        + String : lastName
+        + String : email
+        + Address : address
+    }
+    note  right of Gamer : Every gamer is uniquely identified by a 'gamer face id' \nPersisted in the Gamer Face system"
+
+    class Address <<Value Object>>{
+        + String addressLine1
+        + String addressLine2
+        + String city
+        + String state
+        + String zipcode
+    }
+    note bottom of Address:Persisted as part of Gamer
+
+    class EmailValidator <<Value Object>>{
+        + boolean validate()
+    }
+    note bottom of EmailValidator: Not persisted, just used for validation and then disposed
+}
+
+Gamer "1" *-- "1" Address  : has
+Gamer "uses" -- EmailValidator
+
+
+title \n  Customer classes \n
+footer \n Part of a course on Microservices \n Copyright @ 2021. For more info visit http://ACloudFan.com \n
+
+@enduml
