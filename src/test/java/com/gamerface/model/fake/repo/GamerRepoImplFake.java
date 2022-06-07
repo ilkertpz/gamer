@@ -2,7 +2,6 @@ package com.gamerface.model.fake.repo;
 
 import com.gamerface.model.domain.Gamer;
 import com.gamerface.model.domain.repository.GamerRepo;
-import com.gamerface.model.request.GamerDTO;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +10,12 @@ import org.springframework.stereotype.Component;
 public class GamerRepoImplFake implements GamerRepo {
 
   @Override
-  public boolean signIn(Gamer gamer) {
+  public boolean signUp(Gamer gamer) {
+    return true;
+  }
+
+  @Override
+  public boolean updateProfile(Gamer gamer) {
     return true;
   }
 

@@ -3,4 +3,4 @@ integration-test:
     enabled: false
 
 mongo-db:
-  url: mongodb://10.123.0.102:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
+  url: mongodb+srv://ilkert:<123Qq>@ilkerscluster.47xqve9.mongodb.net/?retryWrites=true&w=majority

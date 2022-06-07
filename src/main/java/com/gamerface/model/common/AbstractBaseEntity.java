@@ -1,9 +1,9 @@
 package com.gamerface.model.common;
 
-import javax.persistence.MappedSuperclass;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+
+import javax.persistence.MappedSuperclass;
 
 
 @MappedSuperclass

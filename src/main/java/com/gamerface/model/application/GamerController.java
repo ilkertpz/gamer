@@ -1,8 +1,8 @@
 package com.gamerface.model.application;
 
 import com.gamerface.model.common.UseCaseHandler;
-import com.gamerface.model.request.GamerDTO;
-import lombok.AllArgsConstructor;
+import com.gamerface.model.request.SignUpUseCase;
+import com.gamerface.model.request.UpdateProfileUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,11 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class GamerController {
 
-  private final UseCaseHandler<Boolean, GamerDTO> signInRequestUseCaseHandler;
+  private final UseCaseHandler<Boolean, SignUpUseCase> signUpRequestUseCaseHandler;
+  private final UseCaseHandler<Boolean, UpdateProfileUseCase> updateProfileRequestUseCaseHandler;
 
-  @PostMapping(value = "/sign-in", produces = MediaType.APPLICATION_JSON_VALUE)
-  Boolean signIn(GamerDTO gamerDTO) throws Exception {
-    return signInRequestUseCaseHandler.handle(gamerDTO);
+  @PostMapping(value = "/sign-up", produces = MediaType.APPLICATION_JSON_VALUE)
+  Boolean signUp(SignUpUseCase useCase) throws Exception {
+    return signUpRequestUseCaseHandler.handle(useCase);
+  }
+
+  @PostMapping(value = "/update", produces = MediaType.APPLICATION_JSON_VALUE)
+  Boolean update(UpdateProfileUseCase useCase) throws Exception {
+    return updateProfileRequestUseCaseHandler.handle(useCase);
   }
 
 }

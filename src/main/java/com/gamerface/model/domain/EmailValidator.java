@@ -1,8 +1,9 @@
 package com.gamerface.model.domain;
 
-import java.util.regex.Pattern;
 import lombok.Data;
 import lombok.experimental.SuperBuilder;
+
+import java.util.regex.Pattern;
 
 /**
  * Value Object Pattern

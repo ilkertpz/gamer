@@ -1,8 +1,9 @@
 @startuml
+!pragma layout smetana
 left to right direction
 actor "Gamer Face User" as gfu
 rectangle GamerFace {
-  usecase "Sign in" as UC1
+  usecase "Sign Up" as UC1
   usecase "Update Profile" as UC2
   usecase "Delete Profile" as UC3
   usecase "Search Profile" as UC4

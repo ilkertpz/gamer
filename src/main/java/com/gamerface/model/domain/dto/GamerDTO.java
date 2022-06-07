@@ -1,4 +1,4 @@
-package com.gamerface.model.request;
+package com.gamerface.model.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,6 +11,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public class GamerDTO {
 
+  private String id;
   private String firstName;
   private String lastName;
   private String email;
