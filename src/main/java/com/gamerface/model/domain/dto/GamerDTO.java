@@ -16,4 +16,6 @@ public class GamerDTO {
   private String lastName;
   private String email;
   private String gamerId;
+  private AddressDTO addressDTO;
+
 }

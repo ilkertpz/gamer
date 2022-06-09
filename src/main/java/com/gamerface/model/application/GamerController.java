@@ -6,6 +6,7 @@ import com.gamerface.model.request.UpdateProfileUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController("/gamer")
@@ -16,12 +17,12 @@ public class GamerController {
   private final UseCaseHandler<Boolean, UpdateProfileUseCase> updateProfileRequestUseCaseHandler;
 
   @PostMapping(value = "/sign-up", produces = MediaType.APPLICATION_JSON_VALUE)
-  Boolean signUp(SignUpUseCase useCase) throws Exception {
+  Boolean signUp(@RequestBody SignUpUseCase useCase) throws Exception {
     return signUpRequestUseCaseHandler.handle(useCase);
   }
 
   @PostMapping(value = "/update", produces = MediaType.APPLICATION_JSON_VALUE)
-  Boolean update(UpdateProfileUseCase useCase) throws Exception {
+  Boolean update(@RequestBody UpdateProfileUseCase useCase) throws Exception {
     return updateProfileRequestUseCaseHandler.handle(useCase);
   }
 

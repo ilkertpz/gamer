@@ -70,6 +70,13 @@
       <version>${org.mapstruct.version}</version>
     </dependency>
 
+    <!--Swagger dependecies-->
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-ui</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+
   </dependencies>
 
   <build>

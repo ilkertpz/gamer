@@ -1,19 +1,16 @@
-package com.gamerface.model.domain;
+package com.gamerface.model.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-/**
- * Value Object Pattern
- * Persistence: Stored in DB as part of a Customer object
- */
+
 @Data
-@SuperBuilder
-@NoArgsConstructor
 @AllArgsConstructor
-public class Address {
+@NoArgsConstructor
+@SuperBuilder
+public class AddressDTO {
 
   private String addressLine1;
   private String city;

@@ -3,4 +3,4 @@ integration-test:
     enabled: false
 
 mongo-db:
-  url: mongodb+srv://ilkert:<123Qq>@ilkerscluster.47xqve9.mongodb.net/?retryWrites=true&w=majority
+  url: mongodb+srv://ilkert:123Qq@ilkerscluster.47xqve9.mongodb.net/?retryWrites=true&w=majority
